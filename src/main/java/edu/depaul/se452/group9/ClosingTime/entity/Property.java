@@ -1,4 +1,4 @@
-package edu.depaul.se452.group9.closingtime.entity;
+package edu.depaul.se452.group9.ClosingTime.entity;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
@@ -12,7 +12,8 @@ import lombok.Getter;
 public class Property {
 
     @MongoId
-    @Getter private String id;
+    @Getter
+    private String id;
 
     private String state;
     private String city;

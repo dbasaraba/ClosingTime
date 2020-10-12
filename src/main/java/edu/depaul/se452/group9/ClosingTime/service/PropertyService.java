@@ -1,11 +1,12 @@
-package edu.depaul.se452.group9.closingtime.service;
+package edu.depaul.se452.group9.ClosingTime.service;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import edu.depaul.se452.group9.closingtime.dao.PropertyDAO;
-import edu.depaul.se452.group9.closingtime.entity.Property;
+
+import edu.depaul.se452.group9.ClosingTime.dao.PropertyDAO;
+import edu.depaul.se452.group9.ClosingTime.entity.Property;
 
 @Service
 public class PropertyService {

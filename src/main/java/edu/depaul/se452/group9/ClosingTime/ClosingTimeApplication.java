@@ -1,4 +1,4 @@
-package edu.depaul.se452.group9.closingtime;
+package edu.depaul.se452.group9.ClosingTime;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
