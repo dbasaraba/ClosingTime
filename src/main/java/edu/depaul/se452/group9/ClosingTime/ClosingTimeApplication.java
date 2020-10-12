@@ -1,4 +1,4 @@
-package edu.depaul.se452.group9.ClosingTime;
+package edu.depaul.se452.group9.closingtime;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,5 @@ public class ClosingTimeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ClosingTimeApplication.class, args);
 	}
-	// This is a test
+
 }
