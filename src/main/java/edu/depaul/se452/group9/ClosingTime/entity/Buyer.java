@@ -15,7 +15,7 @@ public class Buyer
     private int sellerID;
     private String lastName;
     private String Email;
-    private List<edu.depaul.se452.group9.closingtime.entity.Property> preference;
-    private List<edu.depaul.se452.group9.closingtime.entity.Property> favorites;
+    private List<edu.depaul.se452.group9.ClosingTime.entity.Property> preference;
+    private List<edu.depaul.se452.group9.ClosingTime.entity.Property> favorites;
 
 }
