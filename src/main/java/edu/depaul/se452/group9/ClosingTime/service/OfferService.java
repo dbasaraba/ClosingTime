@@ -20,7 +20,8 @@ public class OfferService {
 
     public Collection<Offer> getOffers() { return offerDAO.getOffers(); }
 
-    public Offer createOffer(Offer offer) { return offerDAO.createOffer(offer);}
+    public Offer createOffer(Offer offer) { return offerDAO.createOffer(offer);
+    }
 
 
 }

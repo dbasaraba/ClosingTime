@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <div th:replace="/header :: Header"> </div>
+</head>
+<body>
+<div th:replace="/header :: header"> </div>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Chat Box</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<button type="button" class="btn btn-success">Submit</button>
+<div>This is the chat</div>
+</body>
+</html>
