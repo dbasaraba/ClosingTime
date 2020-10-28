@@ -1,29 +1,52 @@
 <html>
-    <title> index </title>
-    <html xmlns="http://www.w3.org/1999/xhtml"
-          xmlns:th="http://www.thymeleaf.org">
+<title> ClosingTime </title>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
 
 
-    <div th:replace="/header :: Header"> </div>
-</head>
- <body>
- <div th:replace="/header :: header"> </div>
- <div class="col-lg-12 text-center mt-5">
-    <h4>Welcome to ClosingTime, we are excited to help you close on your new home!
+  <div th:replace="/header :: Header"> </div>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    </h4>
-  </div>
-  
-  <div class="col-md-4 offset-md-4 mt-5 border border-success pt-3">
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" placeholder="Enter an address, neighborhood, city, or ZIP code" aria-label="Recipient's username">
-    <div class="input-group-append">
-      <span class="input-group-text"><i class="fa fa-search"></i></span>
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+  <div th:replace="/header :: header"> </div>
+  <div class="container">
+    <div class="col-lg-12 text-center mt-5">
+      <h4>Welcome to ClosingTime, we are excited to help you close on your new home!</h4>
     </div>
+
+
+    <br />
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <form class="card card-sm">
+          <div class="card-body row no-gutters align-items-center">
+            <div class="col-auto">
+              <i class="fas fa-search h4 text-body"></i>
+            </div>
+            <!--end of col-->
+            <div class="col">
+              <input class="form-control form-control-lg form-control-borderless" type="search"
+                placeholder="Enter an address, neighborhood, city, or ZIP code">
+            </div>
+            <!--end of col-->
+            <div class="col-auto">
+              <button class="btn btn-lg btn-success" type="submit">Search</button>
+            </div>
+            <!--end of col-->
+          </div>
+        </form>
+      </div>
+      <!--end of col-->
     </div>
   </div>
-  </div>
-  </div>
- </body>
- </html>
+</body>
+
+</html>
