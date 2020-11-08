@@ -20,7 +20,7 @@ import lombok.ToString;
 public class Buyer {
     @Id 
     @GeneratedValue
-    private int sellerID;
+    private String sellerID;
     private String firstName;
     private String lastName;
     private String Email;
@@ -34,7 +34,7 @@ public class Buyer {
 
     @Override
     public String toString(){
-        return String.format("Buyer[sellerID=%d, firstName='%s', lastName='%s', Email='%s']",
+        return String.format("Buyer[sellerID='%s', firstName='%s', lastName='%s', Email='%s']",
         sellerID,firstName,lastName,Email);
     }
 
@@ -43,14 +43,14 @@ public class Buyer {
     /**
      * @return int return the sellerID
      */
-    public int getSellerID() {
+    public String getSellerID() {
         return sellerID;
     }
 
     /**
      * @param sellerID the sellerID to set
      */
-    public void setSellerID(int sellerID) {
+    public void setSellerID(String sellerID) {
         this.sellerID = sellerID;
     }
 
