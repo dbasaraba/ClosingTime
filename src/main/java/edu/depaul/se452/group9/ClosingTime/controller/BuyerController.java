@@ -1,29 +1,32 @@
 package edu.depaul.se452.group9.ClosingTime.controller;
 
-import java.util.Collection;
-
+import edu.depaul.se452.group9.ClosingTime.dao.BuyerDAO;
 import edu.depaul.se452.group9.ClosingTime.entity.Buyer;
-import edu.depaul.se452.group9.ClosingTime.service.BuyerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import java.util.Collection;
+import java.util.Optional;
 
 @RestController
-@RequestMapping("/buyer")
+public class BuyerController {
 
-public class BuyerController
-{
     @Autowired
-    private BuyerService buyerService;
-
-    @GetMapping
-    public Collection<Buyer> getBuyers() { return buyerService.getBuyers(); }
+    private BuyerDAO buyerDAO;
 
     @PostMapping
-    public Buyer postBuyer(@RequestBody Buyer buyer) { return buyerService.createBuyer(buyer); }
+    public Buyer createBuyer(@RequestBody Buyer buyer) { return buyerDAO.createBuyer(buyer); }
+
+    @GetMapping("/")
+    public Collection<Buyer> getBuyers() { return buyerDAO.getBuyers(); }
+
+    @GetMapping("/{id}")
+    public Optional<Buyer> getBuyer(@PathVariable("id") String id) { return buyerDAO.getBuyer(id); }
+
+    @PutMapping
+    public void updateBuyer(@RequestBody Buyer buyer) { buyerDAO.updateBuyer(buyer); }
+
+    @DeleteMapping("/{id}")
+    public void deleteBuyer(@PathVariable("id") String id) { buyerDAO.deleteBuyer(id); }
+
 }

@@ -9,7 +9,6 @@ public class IndexController {
 
     @GetMapping("/")
 
-
     String index(){
         return "index";
     }
@@ -38,5 +37,5 @@ public class IndexController {
     String account(){
         return "account";
     }
-}
 
+}

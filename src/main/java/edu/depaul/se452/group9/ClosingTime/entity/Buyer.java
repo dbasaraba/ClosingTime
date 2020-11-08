@@ -1,21 +1,25 @@
 package edu.depaul.se452.group9.ClosingTime.entity;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import lombok.Data;
 import lombok.Getter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Document(collection = "Buyer")
+@Document(collection = "Buyers")
 @Data
-public class Buyer
-{
+public class Buyer {
+
+    @Id
+    @Getter
+    private String id;
+
     private String firstName;
-    private int sellerID;
     private String lastName;
-    private String Email;
-    private List<edu.depaul.se452.group9.ClosingTime.entity.Property> preference;
-    private List<edu.depaul.se452.group9.ClosingTime.entity.Property> favorites;
+    private String email;
+
+    private List<Property> favorites;
+    private List<Messenger> messages;
 
 }

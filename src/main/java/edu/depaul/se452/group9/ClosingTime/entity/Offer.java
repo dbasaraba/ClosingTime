@@ -1,19 +1,21 @@
 package edu.depaul.se452.group9.ClosingTime.entity;
 
-
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import lombok.Data;
 import lombok.Getter;
 
-@Document(collection = "Offer")
+@Document(collection = "Offers")
 @Data
 public class Offer {
 
-    @MongoId
+    @Id
     @Getter
     private String id;
-    public String propertyIDref;
-    public long offer;
+
+    public String propertyId;
+
+    public int offer;
+
 }

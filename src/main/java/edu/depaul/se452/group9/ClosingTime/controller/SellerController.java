@@ -1,30 +1,23 @@
 package edu.depaul.se452.group9.ClosingTime.controller;
+
+import edu.depaul.se452.group9.ClosingTime.dao.SellerDAO;
+import edu.depaul.se452.group9.ClosingTime.entity.Seller;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.Collection;
 
-import edu.depaul.se452.group9.ClosingTime.entity.Seller;
-import edu.depaul.se452.group9.ClosingTime.service.SellerService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-import edu.depaul.se452.group9.ClosingTime.entity.Property;
-import edu.depaul.se452.group9.ClosingTime.service.PropertyService;
-
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
 @RestController
-@RequestMapping("/seller")
+@RequestMapping("/sellers")
 public class SellerController {
 
     @Autowired
-    private SellerService SellerService;
+    private SellerDAO sellerDAO;
 
     @GetMapping
-    public Collection<Seller> getSellers() { return SellerService.getSellers();}
+    public Collection<Seller> getSellers() { return sellerDAO.getSellers();}
 
     @PostMapping
-    public Seller postSeller(@RequestBody Seller seller) { return SellerService.createSeller(seller); }
+    public Seller postSeller(@RequestBody Seller seller) { return sellerDAO.createSeller(seller); }
 
 }
